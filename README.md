@@ -1,16 +1,13 @@
-# state_managements
+# State Managements Training
 
-A new Flutter project.
+# Riverpod : https://github.com/HossamAhmedMohamed/State_Managements/tree/riverpod_example
+# Provider : https://github.com/HossamAhmedMohamed/State_Managements/tree/provider_example
+# Bloc : https://github.com/HossamAhmedMohamed/State_Managements/tree/bloc_example
+# Cubit : https://github.com/HossamAhmedMohamed/State_Managements/tree/cubit_example
+# GetX : https://github.com/HossamAhmedMohamed/State_Managements/tree/getx_example
 
-## Getting Started
+## For Successfully login use these info :
+# email : hossaaamahmed6@gmail.com
+# password : hossam1234567
 
-This project is a starting point for a Flutter application.
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
