@@ -3,9 +3,19 @@ import 'main_provider.dart' as provider;
 import 'main_riverpod.dart' as riverpod;
 import 'main_getx.dart' as getx;
 import 'main_cubit.dart' as cubit;
+import 'main_bloc.dart' as bloc;
 
 void main() {
-  const currentFlavor = AppFlavor.cubit;
+
+  /* Very Important for Success login
+  {
+    "email": "hossaaamahmed6@gmail.com",
+    "password": "hossam1234567"
+}
+  */
+
+  
+  const currentFlavor = AppFlavor.bloc;
 
   switch (currentFlavor) {
     case AppFlavor.riverpod:
@@ -20,7 +30,8 @@ void main() {
     case AppFlavor.cubit:
       cubit.main();
       break;
-    default:
-      throw Exception("Flavor not implemented");
+    case AppFlavor.bloc:
+      bloc.main();
+      break;
   }
 }
