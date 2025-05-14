@@ -19,10 +19,10 @@ class AuthState {
       AuthState(status: AuthStatus.error, error: message);
 }
 
-class AuthNotifier extends StateNotifier<AuthState> {
+class RiverpodAuthNotifier extends StateNotifier<AuthState> {
   final Repository repository;
 
-  AuthNotifier(this.repository) : super(AuthState.initial());
+  RiverpodAuthNotifier(this.repository) : super(AuthState.initial());
 
   Future<void> login(String email, String password) async {
     state = AuthState.loading();

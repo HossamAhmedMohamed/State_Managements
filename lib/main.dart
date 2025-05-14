@@ -1,26 +1,18 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:state_managements/features/riverpod_example/presentation/screens/riverpod_login_screen.dart';
+import 'config/flavors.dart';
+import 'main_provider.dart' as provider;
+import 'main_riverpod.dart' as riverpod;
 
 void main() {
-  runApp(ProviderScope(child: const MyApp()));
-}
+  const currentFlavor = AppFlavor.provider;
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'State Management',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-      ),
-      home: RiverpodLoginScreen(),
-    );
+  switch (currentFlavor) {
+    case AppFlavor.riverpod:
+      riverpod.main();
+      break;
+    case AppFlavor.provider:
+      provider.main();
+      break;
+    default:
+      throw Exception("Flavor not implemented");
   }
 }
-
- 

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-import 'package:state_managements/features/riverpod_example/presentation/riverpod/auth_notifier.dart';
-import 'package:state_managements/features/riverpod_example/presentation/riverpod/providers.dart';
+import 'package:state_managements/features/riverpod_example/presentation/riverpod/riverpod_auth_notifier.dart';
+import 'package:state_managements/features/riverpod_example/presentation/riverpod/riverpod_providers.dart';
 
 class RiverpodLoginScreen extends ConsumerWidget {
   final TextEditingController _emailController = TextEditingController();
