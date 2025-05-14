@@ -6,6 +6,13 @@ void main() {
   runApp(ProviderScope(child: const MyApp()));
 }
 
+  /* Very Important for Success login
+  {
+    "email": "hossaaamahmed6@gmail.com",
+    "password": "hossam1234567"
+}
+  */
+
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
