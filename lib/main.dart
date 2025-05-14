@@ -4,6 +4,14 @@ import 'main_riverpod.dart' as riverpod;
 import 'main_getx.dart' as getx;
 
 void main() {
+
+
+    /* Very Important for Success login
+  {
+    "email": "hossaaamahmed6@gmail.com",
+    "password": "hossam1234567"
+}
+  */
   const currentFlavor = AppFlavor.getx;
 
   switch (currentFlavor) {
