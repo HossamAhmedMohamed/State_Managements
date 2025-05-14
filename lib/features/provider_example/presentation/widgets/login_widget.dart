@@ -13,23 +13,24 @@ class LoginWidget extends StatelessWidget {
         Provider.of<ProviderAuthNotifier>(context).passwordController;
     final providerAuthNotifier = Provider.of<ProviderAuthNotifier>(context);
     // final state = providerAuthNotifier.state;
-    return Consumer<ProviderAuthNotifier>(
-      builder: (context, notifier, child) {
-        final state = notifier.state;
-        WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (state.status == AuthStatus.success) {
-            ScaffoldMessenger.of(
-              context,
-            ).showSnackBar(const SnackBar(content: Text('Login successful')));
-          } else if (state.status == AuthStatus.error) {
-            ScaffoldMessenger.of(
-              context,
-            ).showSnackBar(SnackBar(content: Text(state.error ?? 'Error')));
-          }
-        });
-        return Scaffold(
-          backgroundColor: Colors.white,
-          body: Padding(
+
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Consumer<ProviderAuthNotifier>(
+        builder: (context, notifier, child) {
+          final state = notifier.state;
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            if (state.status == AuthStatus.success) {
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(const SnackBar(content: Text('Login successful')));
+            } else if (state.status == AuthStatus.error) {
+              ScaffoldMessenger.of(
+                context,
+              ).showSnackBar(SnackBar(content: Text(state.error ?? 'Error')));
+            }
+          });
+          return Padding(
             padding: const EdgeInsets.all(24.0),
             child: Center(
               child:
@@ -128,9 +129,9 @@ class LoginWidget extends StatelessWidget {
                         ),
                       ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 }
